@@ -14,6 +14,11 @@
 		0B7C7C3F1F589254003E62A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C3D1F589254003E62A0 /* LaunchScreen.storyboard */; };
 		0B7C7C4A1F589254003E62A0 /* TestMyAptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */; };
 		0B7C7C551F5892F3003E62A0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C541F5892F3003E62A0 /* .gitignore */; };
+		0B7C7C591F589A95003E62A0 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C581F589A95003E62A0 /* BaseApiClient.swift */; };
+		0B7C7C5C1F589FB8003E62A0 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C5B1F589FB8003E62A0 /* Shots.swift */; };
+		0B7C7C5E1F58A465003E62A0 /* ShotsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C5D1F58A465003E62A0 /* ShotsApiClient.swift */; };
+		0B7C7C601F58A4AC003E62A0 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C5F1F58A4AC003E62A0 /* ApiError.swift */; };
+		0B7C7C621F58A4C6003E62A0 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C611F58A4C6003E62A0 /* String+Extensions.swift */; };
 		11CB576A671605D6426752C9 /* Pods_TestMyApt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,11 @@
 		0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyAptTests.swift; sourceTree = "<group>"; };
 		0B7C7C4B1F589254003E62A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7C7C541F5892F3003E62A0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0B7C7C581F589A95003E62A0 /* BaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		0B7C7C5B1F589FB8003E62A0 /* Shots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shots.swift; sourceTree = "<group>"; };
+		0B7C7C5D1F58A465003E62A0 /* ShotsApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsApiClient.swift; sourceTree = "<group>"; };
+		0B7C7C5F1F58A4AC003E62A0 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		0B7C7C611F58A4C6003E62A0 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMyApt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,12 +97,9 @@
 		0B7C7C331F589254003E62A0 /* TestMyApt */ = {
 			isa = PBXGroup;
 			children = (
-				0B7C7C341F589254003E62A0 /* AppDelegate.swift */,
+				0B7C7C571F589A20003E62A0 /* App */,
+				0B7C7C561F589A08003E62A0 /* Networking */,
 				0B7C7C361F589254003E62A0 /* ViewController.swift */,
-				0B7C7C381F589254003E62A0 /* Main.storyboard */,
-				0B7C7C3B1F589254003E62A0 /* Assets.xcassets */,
-				0B7C7C3D1F589254003E62A0 /* LaunchScreen.storyboard */,
-				0B7C7C401F589254003E62A0 /* Info.plist */,
 			);
 			path = TestMyApt;
 			sourceTree = "<group>";
@@ -104,6 +111,54 @@
 				0B7C7C4B1F589254003E62A0 /* Info.plist */,
 			);
 			path = TestMyAptTests;
+			sourceTree = "<group>";
+		};
+		0B7C7C561F589A08003E62A0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C631F58A795003E62A0 /* Controller */,
+				0B7C7C641F58A7A1003E62A0 /* Helpers+Extensions */,
+				0B7C7C5A1F589F96003E62A0 /* Model */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		0B7C7C571F589A20003E62A0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C341F589254003E62A0 /* AppDelegate.swift */,
+				0B7C7C381F589254003E62A0 /* Main.storyboard */,
+				0B7C7C3B1F589254003E62A0 /* Assets.xcassets */,
+				0B7C7C3D1F589254003E62A0 /* LaunchScreen.storyboard */,
+				0B7C7C401F589254003E62A0 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		0B7C7C5A1F589F96003E62A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C5B1F589FB8003E62A0 /* Shots.swift */,
+				0B7C7C5F1F58A4AC003E62A0 /* ApiError.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0B7C7C631F58A795003E62A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C581F589A95003E62A0 /* BaseApiClient.swift */,
+				0B7C7C5D1F58A465003E62A0 /* ShotsApiClient.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0B7C7C641F58A7A1003E62A0 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C611F58A4C6003E62A0 /* String+Extensions.swift */,
+			);
+			name = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 		4B2DA06693C17F421BC2223A /* Frameworks */ = {
@@ -281,7 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B7C7C371F589254003E62A0 /* ViewController.swift in Sources */,
+				0B7C7C621F58A4C6003E62A0 /* String+Extensions.swift in Sources */,
+				0B7C7C591F589A95003E62A0 /* BaseApiClient.swift in Sources */,
+				0B7C7C5E1F58A465003E62A0 /* ShotsApiClient.swift in Sources */,
 				0B7C7C351F589254003E62A0 /* AppDelegate.swift in Sources */,
+				0B7C7C5C1F589FB8003E62A0 /* Shots.swift in Sources */,
+				0B7C7C601F58A4AC003E62A0 /* ApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +555,7 @@
 				0B7C7C501F589254003E62A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B7C7C511F589254003E62A0 /* Build configuration list for PBXNativeTarget "TestMyAptTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +564,7 @@
 				0B7C7C531F589254003E62A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
