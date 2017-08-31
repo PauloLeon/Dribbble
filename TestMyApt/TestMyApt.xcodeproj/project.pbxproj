@@ -14,6 +14,7 @@
 		0B7C7C3F1F589254003E62A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C3D1F589254003E62A0 /* LaunchScreen.storyboard */; };
 		0B7C7C4A1F589254003E62A0 /* TestMyAptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */; };
 		0B7C7C551F5892F3003E62A0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C541F5892F3003E62A0 /* .gitignore */; };
+		11CB576A671605D6426752C9 /* Pods_TestMyApt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,9 @@
 		0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyAptTests.swift; sourceTree = "<group>"; };
 		0B7C7C4B1F589254003E62A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7C7C541F5892F3003E62A0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMyApt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.debug.xcconfig"; sourceTree = "<group>"; };
+		B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CB576A671605D6426752C9 /* Pods_TestMyApt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,8 @@
 				0B7C7C331F589254003E62A0 /* TestMyApt */,
 				0B7C7C481F589254003E62A0 /* TestMyAptTests */,
 				0B7C7C321F589254003E62A0 /* Products */,
+				C30884949A4B4FB54BB583BB /* Pods */,
+				4B2DA06693C17F421BC2223A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +106,23 @@
 			path = TestMyAptTests;
 			sourceTree = "<group>";
 		};
+		4B2DA06693C17F421BC2223A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C30884949A4B4FB54BB583BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */,
+				B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B7C7C4E1F589254003E62A0 /* Build configuration list for PBXNativeTarget "TestMyApt" */;
 			buildPhases = (
+				0C01C0B524AA733A1BE1BDB6 /* [CP] Check Pods Manifest.lock */,
 				0B7C7C2D1F589254003E62A0 /* Sources */,
 				0B7C7C2E1F589254003E62A0 /* Frameworks */,
 				0B7C7C2F1F589254003E62A0 /* Resources */,
+				0E4A36C27253A5B6C37B72DB /* [CP] Embed Pods Frameworks */,
+				9A5D7CE5BC9C24A769E97879 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +226,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C01C0B524AA733A1BE1BDB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0E4A36C27253A5B6C37B72DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A5D7CE5BC9C24A769E97879 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B7C7C2D1F589254003E62A0 /* Sources */ = {
@@ -345,6 +420,7 @@
 		};
 		0B7C7C4F1F589254003E62A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L9JEP8CH6G;
@@ -358,6 +434,7 @@
 		};
 		0B7C7C501F589254003E62A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L9JEP8CH6G;
