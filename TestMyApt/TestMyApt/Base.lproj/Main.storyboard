@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Dribbble Shots-->
         <scene sceneID="Ym3-rB-ztj">
             <objects>
                 <tableViewController id="JbP-Ac-kIj" customClass="ShotsTableViewController" customModule="TestMyApt" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShotsCell" rowHeight="90" id="O0B-cM-nvS" customClass="ShotTableViewCell" customModule="TestMyApt" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ShotsCell" rowHeight="90" id="O0B-cM-nvS" customClass="ShotTableViewCell" customModule="TestMyApt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O0B-cM-nvS" id="GYK-j5-MUD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-Da-KtD">
@@ -34,19 +34,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfn-iK-DIb">
-                                            <rect key="frame" x="91" y="8" width="276" height="19.5"/>
+                                            <rect key="frame" x="91" y="8" width="243" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxi-DM-Xhy">
-                                            <rect key="frame" x="91" y="63.5" width="276" height="19.5"/>
+                                            <rect key="frame" x="91" y="63.5" width="243" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wm-fU-U0g">
-                                            <rect key="frame" x="91" y="37" width="276" height="19.5"/>
+                                            <rect key="frame" x="91" y="37" width="243" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -71,6 +71,7 @@
                                     <outlet property="imageShot" destination="AlS-Da-KtD" id="mRN-MG-uHI"/>
                                     <outlet property="titleShot" destination="Kfn-iK-DIb" id="fRH-Zz-f1l"/>
                                     <outlet property="viewCountShot" destination="6Wm-fU-U0g" id="FVK-lk-ER8"/>
+                                    <segue destination="WkW-J5-wtt" kind="show" id="etO-Oy-TIQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -79,11 +80,29 @@
                             <outlet property="delegate" destination="JbP-Ac-kIj" id="OGI-Rn-g4g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="k9n-3H-IDk"/>
+                    <navigationItem key="navigationItem" title="Dribbble Shots" id="k9n-3H-IDk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Av-nu-AnU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325.60000000000002" y="151.57421289355324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VAi-aL-tZq">
+            <objects>
+                <viewController id="WkW-J5-wtt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nrq-w7-Ly5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wez-8D-9uY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CQj-4M-8xe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyx-b7-2np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="163"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="84c-V6-OjT">
