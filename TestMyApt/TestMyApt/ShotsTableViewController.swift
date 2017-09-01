@@ -72,7 +72,7 @@ class ShotsTableViewController: UITableViewController {
             
             cell.titleShot.text = title
             cell.viewCountShot.text = viewsCount
-            cell.createdAtShot.text = createdAt
+            cell.createdAtShot.text = DateFormatterHelper.formatterDate(createdAt: createdAt)
         }
         return cell
     }

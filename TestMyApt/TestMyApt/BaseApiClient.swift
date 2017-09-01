@@ -55,7 +55,7 @@ extension BaseApiClient {
             return params
         }
         
-        // MARK: - Paths
+        // MARK: - Headers
         var hearders: String {
             return "Bearer fcd81e02ab4498d3c898a3b15b81e31096fcd1b419d661fa4e684efb487c34a8"
         }

@@ -19,6 +19,7 @@ class DetailShotViewController: UIViewController {
     @IBOutlet weak var labelCountComment: UILabel!
     @IBOutlet weak var labelCreatedAt: UILabel!
     var id: String?
+    var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,9 @@ class DetailShotViewController: UIViewController {
         labelDescription.text = shotResponse.desc
         labelCountViews.text = "Numero de Visualizações: \(shotResponse.viewsCount ?? "0")"
         labelCountComment.text = "Numero de Comentários: \(shotResponse.commentsCount ?? "0")"
-        labelCreatedAt.text = shotResponse.createdAt
+        if let createdAt = shotResponse.createdAt{
+            labelCreatedAt.text = DateFormatterHelper.formatterDate(createdAt: createdAt)
+        }
         SVProgressHUD.dismiss()
     }
     

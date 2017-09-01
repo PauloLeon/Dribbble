@@ -23,7 +23,7 @@ public class Shots: NSObject {
         self.title = json["title"].stringValue
         self.desc = json["description"].stringValue
         self.viewsCount = json["views_count"].stringValue
-        self.createdAt = json[""].stringValue
+        self.createdAt = json["created_at"].stringValue
         self.image = json["images"]["normal"].stringValue
         self.commentsCount = json["comments_count"].stringValue
     }
