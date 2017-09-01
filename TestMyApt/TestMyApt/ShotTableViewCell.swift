@@ -9,7 +9,7 @@
 import UIKit
 
 class ShotTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var imageShot: UIImageView!
     @IBOutlet weak var titleShot: UILabel!
     @IBOutlet weak var viewCountShot: UILabel!

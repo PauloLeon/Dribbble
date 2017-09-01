@@ -9,12 +9,9 @@
 import Foundation
 
 extension String {
-    
     var titleize: String {
         var words = self.lowercased().characters.split { $0 == " " }.map { String($0) }
         words[0] = words[0].capitalized
-        
         return words.joined(separator: " ")
     }
-    
 }

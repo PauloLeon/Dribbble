@@ -19,7 +19,7 @@ class DetailShotViewController: UIViewController {
     @IBOutlet weak var labelCountComment: UILabel!
     @IBOutlet weak var labelCreatedAt: UILabel!
     var id: String?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.changePlaceholdersStoryboard()
@@ -31,12 +31,12 @@ class DetailShotViewController: UIViewController {
             AlertControllerHelper.showAlertInternet(self, handler: nil)
         }
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         SVProgressHUD.dismiss()
     }
-    
+
     func getAPI() {
         let data = URLRequestParams()
         if let idForShot = self.id {
@@ -46,7 +46,7 @@ class DetailShotViewController: UIViewController {
                 AlertControllerHelper.showApiErrorAlert("Erro", message: apiError.errorMessage(), view: self, handler: nil) })
         }
     }
-    
+
     //Update UI after the download in API
     func updateUI(shotResponse: Shots) {
         //MVVM
@@ -57,10 +57,10 @@ class DetailShotViewController: UIViewController {
         labelCountViews.text = shotViewModel.countViews
         labelCountComment.text = shotViewModel.countComment
         labelCreatedAt.text = shotViewModel.createdAt
-        
+
         SVProgressHUD.dismiss()
     }
-    
+
     //Only for hide the placeholders put in Storyboard
     func changePlaceholdersStoryboard() {
         labelTitle.text = ""

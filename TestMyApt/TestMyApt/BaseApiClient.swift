@@ -14,19 +14,18 @@ import Alamofire
 typealias URLRequestParams = [String: Any]
 
 class BaseApiClient {
-    
+
 }
 
 extension BaseApiClient {
     enum Router: URLRequestConvertible {
-        
+
         static let routeDribble = "https://api.dribbble.com/v1/"
-        
+
         // MARK: - Routes
         case allShots(data: URLRequestParams)
         case getShots(id: String, data: URLRequestParams)
 
-        
         // MARK: - Methods
         var method: HTTPMethod {
             switch self {
@@ -34,7 +33,7 @@ extension BaseApiClient {
                 return .get
             }
         }
-        
+
         // MARK: - Paths
         var path: String {
             switch self {
@@ -42,24 +41,24 @@ extension BaseApiClient {
             case .getShots(let id, _):                                  return "shots/\(id)"
             }
         }
-        
+
         // MARK: - Parameters
         var parameters: URLRequestParams? {
             var params: URLRequestParams?
-            
+
             switch self {
             case .allShots(let data):               params = data
             case .getShots(_, let data):            params = data
             }
-            
+
             return params
         }
-        
+
         // MARK: - Headers
         var hearders: String {
             return "Bearer fcd81e02ab4498d3c898a3b15b81e31096fcd1b419d661fa4e684efb487c34a8"
         }
-        
+
         func asURLRequest() throws -> URLRequest {
             let url: URL
             url = try Router.routeDribble.asURL()

@@ -9,7 +9,7 @@
 import SwiftyJSON
 
 public class Shots: NSObject {
-    
+
     var id: String?
     var title: String?
     var desc: String?
@@ -17,7 +17,7 @@ public class Shots: NSObject {
     var createdAt: String?
     var image: String?
     var commentsCount: String?
-    
+
     init(fromJSON json: JSON) {
         self.id = json["id"].stringValue
         self.title = json["title"].stringValue

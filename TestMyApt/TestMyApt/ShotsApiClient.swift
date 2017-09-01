@@ -5,13 +5,14 @@
 //  Created by Paulo Rosa on 31/08/17.
 //  Copyright © 2017 Paulo Rosa. All rights reserved.
 //
+//swiftlint:disable empty_enum_arguments
 
 import UIKit
 import Alamofire
 import SwiftyJSON
 
 class ShotsApiClient: BaseApiClient {
-    
+
     static func allShots(_ data: URLRequestParams, success: @escaping ([Shots]) -> Void, failure: @escaping (ApiError) -> Void ) {
         Alamofire.request(Router.allShots(data: data))
             .validate()
@@ -31,7 +32,7 @@ class ShotsApiClient: BaseApiClient {
                 }
         }
     }
-    
+
     static func getShot(_ id: String, data: URLRequestParams, success: @escaping (Shots) -> Void, failure: @escaping (ApiError) -> Void) {
         Alamofire.request(Router.getShots(id: id, data: data))
             .validate()
@@ -47,5 +48,5 @@ class ShotsApiClient: BaseApiClient {
                 }
         }
     }
-    
+
 }
