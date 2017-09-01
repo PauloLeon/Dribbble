@@ -10,7 +10,6 @@ import UIKit
 
 class ShotTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var imageShot: UIImageView!
     @IBOutlet weak var titleShot: UILabel!
     @IBOutlet weak var viewCountShot: UILabel!
@@ -18,13 +17,9 @@ class ShotTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }

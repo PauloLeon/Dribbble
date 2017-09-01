@@ -61,19 +61,13 @@ class ShotsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
             return cell
         }
-
-        let imageName = "no-image"
-        if let image = UIImage(named: imageName), let imageAPI = self.shotsArray[indexPath.row].image {
-            cell.imageShot.sd_setImage(with: URL(string: imageAPI), placeholderImage: image)
-        }
-        if let title = self.shotsArray[indexPath.row].title,
-           let viewsCount = self.shotsArray[indexPath.row].viewsCount,
-           let createdAt = self.shotsArray[indexPath.row].createdAt {
-            
-            cell.titleShot.text = title
-            cell.viewCountShot.text = viewsCount
-            cell.createdAtShot.text = DateFormatterHelper.formatterDate(createdAt: createdAt)
-        }
+        
+        let shotViewModel = ShotViewModel(shot: self.shotsArray[indexPath.row])
+        cell.imageShot.sd_setImage(with: shotViewModel.image, placeholderImage: shotViewModel.placeholderImage)
+        cell.titleShot.text = shotViewModel.title
+        cell.viewCountShot.text = shotViewModel.countViews
+        cell.createdAtShot.text = shotViewModel.createdAt
+        
         return cell
     }
     

@@ -19,7 +19,6 @@ class DetailShotViewController: UIViewController {
     @IBOutlet weak var labelCountComment: UILabel!
     @IBOutlet weak var labelCreatedAt: UILabel!
     var id: String?
-    var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +49,15 @@ class DetailShotViewController: UIViewController {
     
     //Update UI after the download in API
     func updateUI(shotResponse: Shots) {
-        let imageName = "no-image"
-        if let image = UIImage(named: imageName), let imageAPI = shotResponse.image {
-            imageView.sd_setImage(with: URL(string: imageAPI), placeholderImage: image)
-        }
-        labelTitle.text = shotResponse.title
-        labelDescription.text = shotResponse.desc
-        labelCountViews.text = "Numero de Visualizações: \(shotResponse.viewsCount ?? "0")"
-        labelCountComment.text = "Numero de Comentários: \(shotResponse.commentsCount ?? "0")"
-        if let createdAt = shotResponse.createdAt{
-            labelCreatedAt.text = DateFormatterHelper.formatterDate(createdAt: createdAt)
-        }
+        //MVVM
+        let shotViewModel = ShotViewModel(shot: shotResponse)
+        imageView.sd_setImage(with: shotViewModel.image, placeholderImage: shotViewModel.placeholderImage)
+        labelTitle.text = shotViewModel.title
+        labelDescription.text = shotViewModel.desc
+        labelCountViews.text = shotViewModel.countViews
+        labelCountComment.text = shotViewModel.countComment
+        labelCreatedAt.text = shotViewModel.createdAt
+        
         SVProgressHUD.dismiss()
     }
     
