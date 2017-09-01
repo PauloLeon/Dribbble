@@ -18,6 +18,10 @@ class ShotsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initUI()
+    }
+    
+    func initUI(){
         if ConnectivityHelper.isConnectedToInternet {
             SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.dark)
             SVProgressHUD.show()
@@ -38,8 +42,12 @@ class ShotsTableViewController: UITableViewController {
             AlertControllerHelper.showApiErrorAlert("Erro", message: apiError.errorMessage(), view: self, handler: nil) })
     }
 
+    // MARK: - Actions
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+        self.initUI()
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -68,15 +76,17 @@ class ShotsTableViewController: UITableViewController {
         }
         return cell
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let detail = segue.destination as? DetailShotViewController else {
+            return
+        }
+        if let cell = sender as? UITableViewCell, let tableView = self.tableView{
+            if let indexPaths = tableView.indexPath(for: cell){
+                detail.id = self.shotsArray[(indexPaths.row)].id
+            }
+        }
     }
-    */
 
 }

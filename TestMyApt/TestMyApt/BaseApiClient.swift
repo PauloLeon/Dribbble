@@ -39,7 +39,7 @@ extension BaseApiClient {
         var path: String {
             switch self {
             case .allShots(_):                                      return "shots"
-            case .getShots(let id):                                  return "shots/\(id)"
+            case .getShots(let id, _):                                  return "shots/\(id)"
             }
         }
         

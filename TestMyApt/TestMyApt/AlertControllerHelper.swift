@@ -26,7 +26,7 @@ class AlertControllerHelper: NSObject {
     
     static func showAlertInternet(_ view: UIViewController, handler: ((UIAlertAction) -> Void)?) {
         let ac = UIAlertController(title: "Internet",
-                                   message: "Você precisa estar conectado a internet para continuar utilizando o Melhor Corrida",
+                                   message: "Você precisa estar conectado a internet para continuar utilizando as features para esse App de Teste",
                                    preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: handler)
         ac.addAction(ok)
