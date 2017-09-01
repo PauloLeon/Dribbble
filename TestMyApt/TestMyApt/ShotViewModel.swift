@@ -44,6 +44,7 @@ public final class ShotViewModel {
         self.image = URL(string: imageString)
         self.placeholderImage = UIImage(named: "no-image")
     }
+    
     // MARK: - Static Func
     internal static func formatterDate(createdAt: String) -> String {
         let dateFormatter = DateFormatter()

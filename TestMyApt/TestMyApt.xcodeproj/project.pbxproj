@@ -11,7 +11,6 @@
 		0B7C7C3A1F589254003E62A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C381F589254003E62A0 /* Main.storyboard */; };
 		0B7C7C3C1F589254003E62A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C3B1F589254003E62A0 /* Assets.xcassets */; };
 		0B7C7C3F1F589254003E62A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C3D1F589254003E62A0 /* LaunchScreen.storyboard */; };
-		0B7C7C4A1F589254003E62A0 /* TestMyAptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */; };
 		0B7C7C551F5892F3003E62A0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C541F5892F3003E62A0 /* .gitignore */; };
 		0B7C7C591F589A95003E62A0 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C581F589A95003E62A0 /* BaseApiClient.swift */; };
 		0B7C7C5C1F589FB8003E62A0 /* Shots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C5B1F589FB8003E62A0 /* Shots.swift */; };
@@ -25,6 +24,8 @@
 		0B7C7C721F590639003E62A0 /* DetailShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C711F590639003E62A0 /* DetailShotViewController.swift */; };
 		0B7C7C771F591CFE003E62A0 /* ShotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C761F591CFE003E62A0 /* ShotViewModel.swift */; };
 		0B7C7C791F592512003E62A0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C781F592512003E62A0 /* .swiftlint.yml */; };
+		0B7C7C7F1F59A9ED003E62A0 /* ShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7C7C7E1F59A9ED003E62A0 /* ShotTests.swift */; };
+		0B7C7C811F59AFF5003E62A0 /* test_shots.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C7C801F59AFF5003E62A0 /* test_shots.plist */; };
 		11CB576A671605D6426752C9 /* Pods_TestMyApt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,6 @@
 		0B7C7C3E1F589254003E62A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7C7C401F589254003E62A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7C7C451F589254003E62A0 /* TestMyAptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMyAptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyAptTests.swift; sourceTree = "<group>"; };
 		0B7C7C4B1F589254003E62A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B7C7C541F5892F3003E62A0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0B7C7C581F589A95003E62A0 /* BaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
@@ -61,9 +61,15 @@
 		0B7C7C711F590639003E62A0 /* DetailShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailShotViewController.swift; sourceTree = "<group>"; };
 		0B7C7C761F591CFE003E62A0 /* ShotViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotViewModel.swift; sourceTree = "<group>"; };
 		0B7C7C781F592512003E62A0 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		0B7C7C7E1F59A9ED003E62A0 /* ShotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotTests.swift; sourceTree = "<group>"; };
+		0B7C7C801F59AFF5003E62A0 /* test_shots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test_shots.plist; sourceTree = "<group>"; };
 		5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMyApt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		714B248CEAACEA06B091998C /* Pods_TestMyAptTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMyAptTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		876DCF878AE727BB45816726 /* Pods-TestMyApt-TestMyAptTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt-TestMyAptTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt-TestMyAptTests/Pods-TestMyApt-TestMyAptTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A366E301F7B5360881F9780 /* Pods_TestMyApt_TestMyAptTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMyApt_TestMyAptTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.debug.xcconfig"; sourceTree = "<group>"; };
 		B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt/Pods-TestMyApt.release.xcconfig"; sourceTree = "<group>"; };
+		E7694B7DCC226B01DE0135F2 /* Pods-TestMyApt-TestMyAptTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMyApt-TestMyAptTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestMyApt-TestMyAptTests/Pods-TestMyApt-TestMyAptTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +126,9 @@
 		0B7C7C481F589254003E62A0 /* TestMyAptTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B7C7C491F589254003E62A0 /* TestMyAptTests.swift */,
-				0B7C7C4B1F589254003E62A0 /* Info.plist */,
+				0B7C7C7B1F59A46F003E62A0 /* Cases */,
+				0B7C7C7C1F59A47C003E62A0 /* Data */,
+				0B7C7C7D1F59A485003E62A0 /* Supporting Files */,
 			);
 			path = TestMyAptTests;
 			sourceTree = "<group>";
@@ -219,10 +226,36 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		0B7C7C7B1F59A46F003E62A0 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C7E1F59A9ED003E62A0 /* ShotTests.swift */,
+			);
+			name = Cases;
+			sourceTree = "<group>";
+		};
+		0B7C7C7C1F59A47C003E62A0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C801F59AFF5003E62A0 /* test_shots.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		0B7C7C7D1F59A485003E62A0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C7C4B1F589254003E62A0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4B2DA06693C17F421BC2223A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				5F8E02248849B1B164420DE0 /* Pods_TestMyApt.framework */,
+				714B248CEAACEA06B091998C /* Pods_TestMyAptTests.framework */,
+				8A366E301F7B5360881F9780 /* Pods_TestMyApt_TestMyAptTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +265,8 @@
 			children = (
 				8FDED828B99B5F1384C9F62C /* Pods-TestMyApt.debug.xcconfig */,
 				B5BF05ADAB5377F4150A3E74 /* Pods-TestMyApt.release.xcconfig */,
+				E7694B7DCC226B01DE0135F2 /* Pods-TestMyApt-TestMyAptTests.debug.xcconfig */,
+				876DCF878AE727BB45816726 /* Pods-TestMyApt-TestMyAptTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -295,6 +330,7 @@
 					0B7C7C441F589254003E62A0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = L9JEP8CH6G;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0B7C7C301F589254003E62A0;
 					};
@@ -336,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7C7C811F59AFF5003E62A0 /* test_shots.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B7C7C4A1F589254003E62A0 /* TestMyAptTests.swift in Sources */,
+				0B7C7C7F1F59A9ED003E62A0 /* ShotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,13 +610,15 @@
 		0B7C7C521F589254003E62A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L9JEP8CH6G;
 				INFOPLIST_FILE = TestMyAptTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testemeuapt.TestMyAptTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMyApt.app/TestMyApt";
 			};
@@ -588,8 +627,9 @@
 		0B7C7C531F589254003E62A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L9JEP8CH6G;
 				INFOPLIST_FILE = TestMyAptTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
