@@ -64,7 +64,7 @@ class ShotTests: XCTestCase {
         XCTAssert(shot.image != "")
     }
     
-    func testShotViewModel() {
+    func testShotViewModelInitializa() {
         // given
         
         //sucess
